@@ -1,5 +1,6 @@
 start:
-	@./bin/main
+	@docker-compose up --build
 
-build:
-	@go build -o ./bin ./cmd/api/main.go
+stop:
+	@docker-compose rm -v --stop --force
+	@docker rmi book-tickets
